@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.weather-card .weather-ellipse {
+.weather-ellipse {
   height: calc(var(--weather-height) * 2.1);
   width: calc(var(--weather-height) * 2.1);
   border-radius: 50%;

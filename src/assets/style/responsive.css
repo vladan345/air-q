@@ -1,0 +1,96 @@
+@media (max-width: 1145px) {
+  .App {
+    overflow: auto;
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+  }
+  .preview {
+    display: none;
+  }
+  .container {
+    display: block;
+  }
+  header {
+    padding: 50px 20px;
+  }
+  .Status,
+  .Weather {
+    width: 47.5%;
+    margin: 0 2.5%;
+  }
+  .subheading {
+    font-size: 24px;
+  }
+
+  /* Status card */
+  .status-card {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .mood-ellipse {
+    top: 0;
+    left: 50%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .mood-ellipse img {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+  .status-message {
+    margin-top: calc(var(--status-height) + 20px);
+  }
+  .pollution-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  /* Weather card */
+  .weather-card {
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .weather-ellipse {
+    top: -100px;
+    left: 50%;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(var(--status-height) * 2);
+    width: calc(var(--status-height) * 2);
+  }
+  .temperature {
+    margin-top: 20px;
+  }
+  .details {
+    margin-top: 150px;
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+  footer {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 750px) {
+  .App {
+    height: auto;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .Status,
+  .Weather {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+}

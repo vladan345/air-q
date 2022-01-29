@@ -10,7 +10,7 @@
   padding: 20px;
   margin-bottom: 50px;
 }
-.status-card .mood-ellipse {
+.mood-ellipse {
   height: calc(var(--status-height) * 2);
   width: calc(var(--status-height) * 2);
   border-radius: 50%;
