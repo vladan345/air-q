@@ -32,20 +32,20 @@ function App() {
     }
   }, [isLoaded]);
 
-  const data = {
-    weather: {
-      tp: -5,
-      pr: 1020,
-      hu: 62,
-      ws: 2,
-      wd: 180,
-      ic: "01d",
-    },
-    pollution: {
-      aqius: 256,
-      mainus: "p1", //main pollutant for US AQI
-    },
-  };
+  // const data = {
+  //   weather: {
+  //     tp: -5,
+  //     pr: 1020,
+  //     hu: 62,
+  //     ws: 2,
+  //     wd: 180,
+  //     ic: "01d",
+  //   },
+  //   pollution: {
+  //     aqius: 256,
+  //     mainus: "p1", //main pollutant for US AQI
+  //   },
+  // };
 
   const changeTheme = () => {
     if (theme === "light") {
