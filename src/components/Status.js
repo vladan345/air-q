@@ -54,15 +54,17 @@ function Status(props) {
           <div className="status-circle"></div>
           <h3 className="status-text sec-heading">word</h3>
         </div>
-        <div className="aqi">
-          <h3 className="aqi-heading sec-heading">US aqi</h3>
-          <p className="aqi-value value-bold">{aqius}</p>
-        </div>
-        <div className="pollutant">
-          <h3 className="pollutant-heading sec-heading">Main pollutant</h3>
-          <p className="pollutant-value value-regular">
-            {mainus.toUpperCase()}
-          </p>
+        <div className="pollution-row">
+          <div className="aqi">
+            <h3 className="aqi-heading sec-heading">US aqi</h3>
+            <p className="aqi-value value-bold">{aqius}</p>
+          </div>
+          <div className="pollutant">
+            <h3 className="pollutant-heading sec-heading">Main pollutant</h3>
+            <p className="pollutant-value value-regular">
+              {mainus.toUpperCase()}
+            </p>
+          </div>
         </div>
         <div className="mood-ellipse">
           <img src="" alt="" />

@@ -5,13 +5,14 @@ import Weather from "./Weather";
 import Preview from "./Preview";
 import Loading from "./Loading";
 
-// import { getData } from "../assets/helpers/getData";
+import { getData } from "../assets/helpers/getData";
 
 // Style
 import "../assets/style/App.css";
+import "../assets/style/responsive.css";
 
 function App() {
-  // const [current, setCurrent] = useState();
+  const [current, setCurrent] = useState();
   const [isLoaded, setLoaded] = useState(false);
   const [theme, setTheme] = useState("");
 
@@ -23,10 +24,10 @@ function App() {
       } else {
         setTheme(localStorage.getItem("theme"));
       }
-      // getData().then((resp) => {
-      //   console.log(resp);
-      //   setCurrent(resp.data.current);
-      // });
+      getData().then((resp) => {
+        console.log(resp);
+        setCurrent(resp.data.current);
+      });
       setLoaded(true);
     }
   }, [isLoaded]);
@@ -38,7 +39,7 @@ function App() {
       hu: 62,
       ws: 2,
       wd: 180,
-      ic: "09d",
+      ic: "01d",
     },
     pollution: {
       aqius: 256,
@@ -74,28 +75,28 @@ function App() {
           <p className="menu-icon">bars</p>
         </div>
       </header>
-      {/* {current && (
+      {current && (
         <div className="container">
-          <div className="column">
+          <div className="column preview">
             <Preview pollution={current.pollution.aqius} />
           </div>
-          <div className="column">
+          <div className="column cards">
             <Status pollution={current.pollution} />
             <Weather weather={current.weather} />
           </div>
         </div>
-      )} */}
-      {data && (
+      )}
+      {/* {data && (
         <div className="container">
-          <div className="column">
+          <div className="column preview">
             <Preview pollution={data.pollution.aqius} />
           </div>
-          <div className="column">
+          <div className="column cards">
             <Status pollution={data.pollution} />
             <Weather weather={data.weather} />
           </div>
         </div>
-      )}
+      )} */}
       <footer>
         <a
           className="social"

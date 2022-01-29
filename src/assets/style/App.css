@@ -114,6 +114,7 @@ body {
   height: 100vh;
   background: var(--background);
   transition: all 0.3s;
+  overflow: hidden;
 }
 /*Fonts*/
 .logo {
@@ -199,10 +200,10 @@ body {
 .column {
   width: 50%;
 }
-.column:last-of-type {
+.cards {
   width: 45%;
 }
-.column:first-of-type {
+.preview {
   margin-right: 5%;
 }
 
@@ -284,7 +285,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  padding: 100px 0;
 }
 .social {
   display: flex;
