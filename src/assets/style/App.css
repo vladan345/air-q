@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700&display=swap");
+
+@font-face {
+  font-family: "FA light";
+  src: url("../fonts/Light.otf");
+}
+@font-face {
+  font-family: "FA solid";
+  src: url("../fonts/Solid.otf");
+}
+@font-face {
+  font-family: "FA brands";
+  src: url("../fonts/Brands.otf");
+}
+:root {
+  /* card height */
+  --status-height: 290px;
+  --weather-height: 185px;
+}
+
+.light {
+  --secondary: #858585;
+  --primary: #2e2e2e;
+  --temp-color: #2e2e2e;
+  --background: #ecf0f3;
+
+  /* main shadows opacity 1 */
+  --shadow-light: #ffffffff;
+  --shadow-dark: #c9cccfff;
+
+  /* main shadows opacity 0 */
+  --shadow-light-hide: #ffffff00;
+  --shadow-dark-hide: #c9cccf00;
+
+  /* preview shadows */
+  --preview-shadow: #00000080;
+
+  /* mood colors */
+  --red: #ffa0a0;
+  --orange: #ffe5b2;
+  --yellow: #fffcb2;
+  --green: #c2ffb8;
+
+  /* status shadows */
+  --red-light: #ffb8b8;
+  --red-dark: #d98888;
+
+  --orange-light: #ffffcd;
+  --orange-dark: #d9c397;
+
+  --yellow-light: #ffffcd;
+  --yellow-dark: #d9d697;
+
+  --green-light: #dfffd4;
+  --green-dark: #a5d99c;
+
+  /* weather colors */
+  --storm: #dedede;
+  --cold: #d2fcff;
+}
+
+.dark {
+  --secondary: #ffffff99;
+  --primary: #ffffffde;
+  --temp-color: #292d32;
+  --background: #292d32;
+
+  /* main shadows opacity 1 */
+  --shadow-light: #2f343aff;
+  --shadow-dark: #23262bff;
+
+  /* main shadows opacity 0 */
+  --shadow-light-hide: #2f343a00;
+  --shadow-dark-hide: #23262b00;
+
+  /* preview shadows */
+  --preview-shadow: #000000b3;
+
+  /* mood colors */
+  --red: #bf4040;
+  --orange: #cc9833;
+  --yellow: #ccc733;
+  --green: #52bf40;
+
+  /* status shadows */
+  --red-light: #dc4c4c;
+  --red-dark: #672222;
+
+  --orange-light: #ebaf3b;
+  --orange-dark: #6e521b;
+
+  --yellow-light: #ebe53b;
+  --yellow-dark: #6e6c1b;
+
+  --green-light: #5edc4a;
+  --green-dark: #2d6722;
+
+  /* weather colors */
+  --storm: #8f8f8f;
+  --cold: #33c2cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 300;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  background: var(--background);
+  transition: all 0.3s;
+}
+/*Fonts*/
+.logo {
+  text-transform: capitalize;
+  color: var(--primary);
+  font-weight: 300;
+  font-size: 42px;
+}
+.subheading {
+  color: var(--secondary);
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.sec-heading {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--secondary);
+}
+.value-bold {
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--primary);
+}
+.value-regular {
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--primary);
+}
+.socials {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--secondary);
+}
+.temp-value {
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--temp-color);
+}
+/* Icons */
+
+.icon {
+  font-family: "FA light";
+  font-size: 42px;
+  color: var(--temp-color);
+  line-height: 42px;
+}
+.menu-button .menu-icon {
+  font-family: "FA light";
+  font-size: 32px;
+  color: var(--secondary);
+  line-height: 32px;
+  cursor: pointer;
+  padding-right: 2px;
+}
+.arrow {
+  font-family: "FA solid";
+  font-size: 24px;
+  color: var(--primary);
+}
+.social .github-icon {
+  margin-right: 5px;
+  font-size: 24px;
+  font-family: "FA brands";
+  color: var(--secondary);
+  transition: 0.3s;
+}
+.switch-button {
+  font-family: "FA solid";
+  font-size: 16px;
+  color: var(--secondary);
+}
+
+/* Main layout */
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.column {
+  width: 50%;
+}
+.column:last-of-type {
+  width: 45%;
+}
+.column:first-of-type {
+  margin-right: 5%;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 50px 0;
+  max-width: 1100px;
+  width: 100%;
+}
+.menu-button {
+  width: 62px;
+  height: 62px;
+  padding: 0 15px;
+  border-radius: 50px;
+  background: var(--background);
+  box-shadow: 6px 6px 12px var(--shadow-dark),
+    -6px -6px 12px var(--shadow-light),
+    inset 6px 6px 12px var(--shadow-dark-hide),
+    inset -6px -6px 12px var(--shadow-light-hide);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+.menu-button:hover {
+  box-shadow: 6px 6px 12px var(--shadow-dark-hide),
+    -6px -6px 12px var(--shadow-light-hide),
+    inset 6px 6px 12px var(--shadow-dark),
+    inset -6px -6px 12px var(--shadow-light);
+}
+.opened {
+  width: 155px;
+  box-shadow: 6px 6px 12px var(--shadow-dark-hide),
+    -6px -6px 12px var(--shadow-light-hide),
+    inset 6px 6px 12px var(--shadow-dark),
+    inset -6px -6px 12px var(--shadow-light);
+}
+.switch {
+  width: 60px;
+  height: 30px;
+  background: var(--background);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark),
+    inset -3px -3px 6px var(--shadow-light);
+  border-radius: 30px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+.opened .switch {
+  opacity: 1;
+  pointer-events: auto;
+}
+.switch-button {
+  width: 34px;
+  height: 34px;
+  box-shadow: 3px 3px 7px var(--shadow-dark), -3px -3px 7px var(--shadow-light);
+  border-radius: 50%;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate(-4px, -50%);
+  top: 50%;
+  transition: 0.3s;
+}
+.changed .switch-button {
+  transform: translate(calc(100% - 4px), -50%);
+}
+/* Social */
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--secondary);
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.social:hover {
+  color: var(--primary);
+}
+.social:hover .github-icon {
+  color: var(--primary);
+}

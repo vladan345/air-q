@@ -1,0 +1,56 @@
+.weather-card {
+  background-color: var(--background);
+  box-shadow: 18px 18px 36px var(--shadow-dark),
+    -18px -18px 36px var(--shadow-light);
+  width: 100%;
+  height: var(--weather-height);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.weather-card .weather-ellipse {
+  height: calc(var(--weather-height) * 2.1);
+  width: calc(var(--weather-height) * 2.1);
+  border-radius: 50%;
+  background: var(--yellow);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+.temperature {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+.temp-value {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.detail-heading {
+  margin-bottom: 10px;
+}
+.detail img {
+  height: 20px;
+  transition: 2s;
+}
