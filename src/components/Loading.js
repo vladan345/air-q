@@ -5,6 +5,7 @@ import "../assets/style/Loading.css";
 
 function Loading() {
   useEffect(() => {
+    document.querySelector("body").style.overflow = "hidden";
     startLoading();
   }, []);
 
@@ -23,6 +24,7 @@ function Loading() {
           loading.style.transition = "0.5s";
           loading.style.opacity = 0;
           loading.style.pointerEvents = "none";
+          document.querySelector("body").style.overflow = "auto";
           clearInterval(timer);
         }
       }, 30);
