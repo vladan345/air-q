@@ -27,7 +27,7 @@ function Status(props) {
       tempObj = severity[0];
     } else if (data <= 100) {
       tempObj = severity[1];
-    } else if (data <= 200) {
+    } else if (data <= 151) {
       tempObj = severity[2];
     } else {
       tempObj = severity[3];
